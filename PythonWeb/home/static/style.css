@@ -1,0 +1,9 @@
+html,
+body {
+  height: 100%;
+  margin-top: 10px;
+}
+
+.content-main {
+  min-height: 95%;
+}

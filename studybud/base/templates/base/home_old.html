@@ -1,0 +1,49 @@
+{% extends "main.html" %} 
+
+{% block content %}
+
+<style>
+  .home-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  .topic-name {
+    font-size:24px;
+    text-align:center;
+  }
+
+  .btn-name {
+    font-size:20px;
+    text-decoration: none;
+    padding:4px;
+    background:#ccc;
+    text:white;
+    
+  }
+</style>
+
+<div class="home-container">
+  <div class="topic">
+    {% include "base/topics_component.html" %}
+  </div>
+  <div>
+    <div>
+      <div>
+        <h1>
+          <a href="{% url 'create-room' %}">Create Room</a>
+        </h1>
+      </div>
+      <h3>{{room_count}} rooms available </h3>
+
+      {% include "base/feed_component.html" %}
+    </div>
+  </div>
+
+  <div>
+    {% include "base/activity_component.html" %}
+
+  </div>
+</div>
+
+{% endblock content %}
